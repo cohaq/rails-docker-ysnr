@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7
+      - image: cimg/ruby:2.7
     working_directory: ~/rails-docker-ysnr/src
     steps:
       - checkout:
@@ -30,9 +30,6 @@ jobs:
       - checkout:
           path: ~/rails-docker-ysnr
       - ruby/install-deps
-      - run:
-          name: bundle install
-          command: bundle install
       - run:
           name: Database setup
           command: bundle exec rails db:migrate
