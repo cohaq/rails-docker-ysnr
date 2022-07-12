@@ -1,4 +1,4 @@
-FROM --platform=linux/x86_64 ruby:2.7
+FROM --platform=linux/x86_64 ruby:3.1.2
 
 ENV RAILS_ENV=production
 
