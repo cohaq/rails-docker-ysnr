@@ -12,8 +12,8 @@ jobs:
           path: ~/rails-docker-ysnr
       - ruby/install-deps
       - run:
-          name: bundle install
-          command: bundle install
+          name: gem install
+          command: gem install mysql2:0.5.4
 
   test:
     docker:
@@ -34,8 +34,8 @@ jobs:
           path: ~/rails-docker-ysnr
       - ruby/install-deps
       - run:
-          name: bundle install
-          command: bundle install
+          name: gem install
+          command: gem install mysql2:0.5.4
       - run:
           name: Database setup
           command: bundle exec rails db:migrate
